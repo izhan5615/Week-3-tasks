@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Month Days</title>
+    <script>
+        function getMonthDays() {
+            var monthName = prompt("Enter the name of the month:");
+            var daysInMonth;
+
+            switch (monthName.toLowerCase()) {
+                case "jan":
+                case "mar":
+                case "may":
+                case "july":
+                case "aug":
+                case "oct":
+                case "dec":
+                    daysInMonth = 31;
+                    break;
+                case "apr":
+                case "june":
+                case "sep":
+                case "nov":
+                    daysInMonth = 30;
+                    break;
+                case "feb":
+                    daysInMonth = 28;
+                    break;
+                default:
+                    daysInMonth = "Invalid month";
+            }
+
+            alert("The total number of days in " + monthName + " is " + daysInMonth);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getMonthDays()">Get Month Days</button>
+</body>
+</html>
